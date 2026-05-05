@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Tempo de Ecrã Família",
-  description: "App familiar para gerir tempo de ecrã",
+  description: "App familiar para gerir tempo de ecrã"
 };
 
 export default function RootLayout({ children }) {
