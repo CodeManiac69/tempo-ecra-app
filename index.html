@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tempo de Ecrã</title>
+</head>
+<body>
+  <h1>Tempo de Ecrã Família</h1>
+
+  <h2>Filho</h2>
+  <select id="child"></select>
+  <p>Saldo: <span id="saldo">0</span> min</p>
+
+  <h2>Tarefas</h2>
+  <button onclick="add(5)">Fazer cama (+5)</button>
+  <button onclick="add(15)">Quarto (+15)</button>
+  <button onclick="add(30)">Boa nota (+30)</button>
+
+  <h2>Usar tempo</h2>
+  <button onclick="use(5)">-5</button>
+
+  <script>
+    let data = { Lea: 0, Anais: 0 };
+    const select = document.getElementById("child");
+    const saldo = document.getElementById("saldo");
+
+    function update() {
+      saldo.innerText = data[select.value];
+    }
+
+    function add(m) {
+      data[select.value] += m;
+      update();
+    }
+
+    function use(m) {
+      data[select.value] = Math.max(0, data[select.value] - m);
+      update();
+    }
+
+    Object.keys(data).forEach(n => {
+      let o = document.createElement("option");
+      o.value = n;
+      o.innerText = n;
+      select.appendChild(o);
+    });
+
+    update();
+  </script>
+</body>
+</html>
