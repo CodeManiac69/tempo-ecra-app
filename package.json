@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "next build"
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
   },
   "dependencies": {
     "next": "14.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "framer-motion": "^11.0.0",
-    "lucide-react": "^0.400.0"
+    "react-dom": "18.2.0"
   }
 }
